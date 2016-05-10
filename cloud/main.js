@@ -8,6 +8,7 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
   // request has 2 parameters: params passed by the client and the authorized user                                                                                                                               
   var params = request.params;
   var user = request.user;
+  var fromuser = request.fromuser;
 
   // Our "Message" class has a "text" key with the body of the message itself                                                                                                                                    
   var messageText = params.text;
