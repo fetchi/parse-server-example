@@ -20,7 +20,7 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
   Parse.Push.send({
     where: pushQuery, // Set our Installation query                                                                                                                                                              
     data: {
-      alert: "Message: " + messageText
+      alert: "New message from \(PFUser.currentUser()!.username!): " + messageText
     }
   }, { success: function() {
       console.log("#### PUSH OK");
