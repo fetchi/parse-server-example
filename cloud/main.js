@@ -18,7 +18,7 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
   pushQuery.equalTo('deviceType', 'ios'); // targeting iOS devices only 
   pushQuery.equalTo('user', targetUser);
 
-  Parse.Push.sendPushInBackground({
+  Parse.Push.send({
     where: pushQuery, // Set our Installation query                                                                                                                                                              
     data: {
       alert: "New message from " + fromUser  + ": " + messageText
