@@ -8,11 +8,11 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
   // request has 2 parameters: params passed by the client and the authorized user                                                                                                                               
   var params = request.params;
   var user = request.user;
-  var fromuser = request.fromuser;
 
   // Our "Message" class has a "text" key with the body of the message itself                                                                                                                                    
   var messageText = params.text;
   var targetUser = params.user;
+  var fromUser = params.fromuser;
 
   var pushQuery = new Parse.Query(Parse.Installation);
   pushQuery.equalTo('deviceType', 'ios'); // targeting iOS devices only 
@@ -21,7 +21,7 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
   Parse.Push.send({
     where: pushQuery, // Set our Installation query                                                                                                                                                              
     data: {
-      alert: "New message from \(PFUser.currentUser()!.username!): " + messageText
+      alert: "New message from " + fromUser  + ": " + messageText
     }
   }, { success: function() {
       console.log("#### PUSH OK");
