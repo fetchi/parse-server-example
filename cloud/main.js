@@ -22,7 +22,7 @@ Parse.Cloud.define("iosPushTest", function(request, response) {
     where: pushQuery, // Set our Installation query                                                                                                                                                              
     data: {
       alert: "New message from " + fromUser  + ": " + messageText
-      badge: "Increment"
+     
     }
   }, { success: function() {
       console.log("#### PUSH OK");
