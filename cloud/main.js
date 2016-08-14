@@ -41,7 +41,6 @@ Parse.Cloud.define("acceptfrndreq", function(request, response) {
   var user = request.user;
 
   // Our "Message" class has a "text" key with the body of the message itself                                                                                                                                    
-  var messageText = params.text;
   var targetUser = params.user;
   var fromUser = params.fromuser;
 
