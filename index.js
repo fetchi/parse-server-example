@@ -17,7 +17,7 @@ var pushConfig = {'ios': [
   {
    pfx: devCertPath, // P12 file only
    bundleId: 'com.parse.fetchii',  // change to match bundleId
-   production: false // dev certificate
+   production: true // dev certificate
   }
  ]
 };
