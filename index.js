@@ -12,12 +12,18 @@ if (!databaseUri) {
 }
 
 var devCertPath = path.resolve(__dirname, 'FetchiiCert.p12');
+var devCertPath2 = path.resolve(__dirname, 'FetchiiCert2.p12');
 
 var pushConfig = {'ios': [
   {
    pfx: devCertPath, // P12 file only
    bundleId: 'com.parse.fetchii',  // change to match bundleId
-   production: true // dev certificate
+   production: true // Production certificate
+  },
+  {
+   pfx: devCertPath2, // P12 file only
+   bundleId: 'com.parse.fetchii',  // change to match bundleId
+   production: false // dev certificate
   }
  ]
 };
