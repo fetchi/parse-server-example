@@ -36,7 +36,7 @@ var api = new ParseServer({
     module: 'parse-server-simple-mailgun-adapter',
     options: { 
                fromAddress: 'info@fetchii.com',
-               domain: 'sandbox4eec9f25f4df46b8bf1db06d81e6562a.mailgun.org', 
+               domain: 'fetchii.com', 
                apiKey: 'key-e28f94bb0f9227e24e2b61702783757d', 
              }
  },
