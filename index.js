@@ -29,6 +29,17 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   push: pushConfig,
+  verifyUserEmails: true,
+  publicServerURL: 'https://fetchii2.herokuapp.com/parse',
+  appName: 'Fetchii',
+  emailAdapter: { 
+    module: 'parse-server-simple-mailgun-adapter',
+    options: { 
+               fromAddress: 'info@fetchii.com',
+               domain: 'sandbox4eec9f25f4df46b8bf1db06d81e6562a.mailgun.org', 
+               apiKey: 'key-e28f94bb0f9227e24e2b61702783757d', 
+             }
+ },
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
