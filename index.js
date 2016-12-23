@@ -44,7 +44,7 @@ var api = new ParseServer({
   // The public URL of your app.
   // This will appear in the link that is used to verify email addresses and reset passwords.
   // Set the mount path as it is in serverURL
-  publicServerURL: 'https://example.com/parse',
+  publicServerURL: 'http://fetchii2.herokuapp.com/parse',
   // Your apps name. This will appear in the subject and body of the emails that are sent.
   appName: 'Fetchii',
   // The email adapter
