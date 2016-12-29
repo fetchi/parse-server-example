@@ -35,7 +35,7 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   push: pushConfig,
-  verifyUserEmails: false,
+  verifyUserEmails: true,
   publicServerURL: 'https://fetchii2.herokuapp.com/parse',
   appName: 'Fetchii',
   emailAdapter: { 
